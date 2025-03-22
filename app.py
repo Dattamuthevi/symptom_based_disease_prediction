@@ -3,7 +3,7 @@ import pandas as pd
 import pickle
 
 # Define Flask App using default 'templates' and 'static' folders in the current directory
-app = Flask(__name__, template_folder="templates", static_folder="static")
+app = Flask(__name__, template_folder="template", static_folder="static")
 
 # Load Data
 severity_df = pd.read_csv("Symptom_severity.csv")

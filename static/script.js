@@ -63,7 +63,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 medication: ["Paracetamol (500mg every 6 hours)", "Ibuprofen (only if no stomach issues)"],
                 diet: ["Drink electrolyte-rich fluids", "Consume light soups and porridge"],
                 advice: "Monitor temperature. If fever exceeds 102°F for more than 48 hours, seek medical attention."
-            },x
+            },
             "cough": {
                 disease: "BRONCHITIS",
                 confidence: "78%",
