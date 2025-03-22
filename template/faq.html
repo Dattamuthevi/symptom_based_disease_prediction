@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ - Medical Advice</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a7083917a9.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Caudex:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <!-- Add Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Caudex:wght@400;700&display=swap');
+
+        body {
+            font-family: 'Caudex', serif;
+            background: linear-gradient(135deg, #f0f4f8, #d9e8f5);
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #003366;
+            font-size: 3em;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+
+        .faq-section {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .faq-item {
+            background: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            padding: 20px;
+            transition: transform 0.3s ease, background-color 0.3s ease;
+        }
+
+        .faq-item:hover {
+            background-color: #f2f2f2;
+            transform: translateY(-10px);
+        }
+
+        .faq-question {
+            font-size: 1.5em;
+            font-weight: bold;
+            color: #003366;
+            cursor: pointer;
+            position: relative;
+            padding-left: 30px;
+        }
+
+        .faq-question::before {
+            content: "+";
+            position: absolute;
+            left: 0;
+            top: -25%;
+            
+            font-size: 1.5em;
+            color: #003366;
+            transition: transform 0.3s ease;
+        }
+
+        .faq-question.active::before {
+            transform: rotate(45deg);
+        }
+
+        .faq-answer {
+            display: none;
+            font-size: 1.2em;
+            margin-top: 10px;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        .faq-answer.show {
+            display: block;
+        }
+
+        .logo-name {
+        color: #fff;
+        margin-left: 15px;
+        font-size: 1.5rem;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-left">
+            <img src="/images/logo.png" alt="Logo" class="logo">
+            <span class="logo-name"></span>
+        </div>
+        <ul class="navbar-right">
+            <li><a href="home.html"><i class="fas fa-home"></i> Home</a></li>
+            <li><a href="about.html"><i class="fas fa-info-circle"></i> About</a></li>
+            <li><a href="faq.html"><i class="fas fa-question-circle"></i> FAQ</a></li>
+            <li><a href="contact.html"><i class="fas fa-phone"></i> Contact</a></li>
+        </ul>
+        
+    </nav>
+
+    <div class="container">
+        <h1>Frequently Asked Questions</h1>
+        <div class="faq-section">
+            <div class="faq-item">
+                <div class="faq-question">1. What symptoms should I be concerned about?</div>
+                <div class="faq-answer">
+                    If you experience persistent symptoms like severe pain, fever, unexplained weight loss, or changes in appetite, you should consult a doctor. Always seek professional advice if you're unsure.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">2. How do I prepare for my first appointment?</div>
+                <div class="faq-answer">
+                    Bring a list of your symptoms, any medications you are currently taking, and your medical history. If you have previous test results, bring those as well.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">3. What should I do if I have a medical emergency?</div>
+                <div class="faq-answer">
+                    In case of a medical emergency, call emergency services immediately or go to the nearest emergency room. Don’t wait for an appointment if your condition is critical.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">4. How can I manage my chronic condition?</div>
+                <div class="faq-answer">
+                    Regular check-ups, following prescribed treatment plans, and lifestyle modifications (diet, exercise) are essential. Consult your doctor for personalized management strategies.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">5. When should I get a second opinion?</div>
+                <div class="faq-answer">
+                    If you are uncertain about a diagnosis or treatment plan, or if your condition does not improve, seeking a second opinion can provide clarity and alternative options.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">6. How can I access my medical records?</div>
+                <div class="faq-answer">
+                    You can request your medical records from your healthcare provider's office or through their online patient portal, if available.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">7. What vaccinations do I need?</div>
+                <div class="faq-answer">
+                    Vaccination requirements depend on your age, health status, and travel plans. Consult your doctor to determine which vaccines are appropriate for you.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">8. How do I know if I need a specialist?</div>
+                <div class="faq-answer">
+                    Your primary care physician can refer you to a specialist if you have a condition that requires specialized care or advanced treatment.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">9. What are the side effects of my medication?</div>
+                <div class="faq-answer">
+                    Side effects vary by medication. Always read the medication guide provided, and discuss any concerns with your doctor or pharmacist.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">10. How can I maintain a healthy lifestyle?</div>
+                <div class="faq-answer">
+                    Focus on a balanced diet, regular exercise, adequate sleep, and stress management. Regular check-ups with your doctor can help monitor your overall health.
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const faqItems = document.querySelectorAll('.faq-item');
+
+        faqItems.forEach(item => {
+            const question = item.querySelector('.faq-question');
+            const answer = item.querySelector('.faq-answer');
+
+            question.addEventListener('click', () => {
+                // Close any currently open questions
+                faqItems.forEach(otherItem => {
+                    if (otherItem !== item) {
+                        otherItem.querySelector('.faq-answer').classList.remove('show');
+                        otherItem.querySelector('.faq-question').classList.remove('active');
+                    }
+                });
+
+                // Toggle the clicked question
+                answer.classList.toggle('show');
+                question.classList.toggle('active');
+            });
+        });
+    </script>
+</body>
+</html>

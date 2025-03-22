@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Go Chat - VaidyAInova</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Caudex', serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: #ffffff;
+            text-align: center;
+            flex-direction: column;
+        }
+
+        /* Logo Container */
+        .gochat-container {
+            cursor: pointer;
+        }
+
+        /* Custom Logo - Even Bigger */
+        .gochat-logo {
+            width: 600px; /* Larger Logo */
+            max-width: 95%;
+            transition: transform 0.4s ease, filter 0.4s ease;
+            filter: drop-shadow(8px 8px 30px rgba(0, 0, 0, 0.3));
+        }
+
+        /* Hover Effect for Logo */
+        .gochat-container:hover .gochat-logo {
+            transform: scale(1.15); /* More pronounced zoom effect */
+            filter: drop-shadow(12px 12px 30px rgba(0, 0, 0, 0.5));
+        }
+
+        /* Stunning Button Text with Blue Color */
+        .click-text {
+            margin-top: 30px;
+            font-size: 26px;
+            font-weight: bold;
+            color: #ffffff;
+            background: linear-gradient(45deg, #007BFF, #1E90FF, #00BFFF);
+            padding: 12px 25px;
+            border-radius: 30px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+            cursor: pointer;
+        }
+
+        /* Hover Effect for Button Text */
+        .gochat-container:hover .click-text {
+            transform: scale(1.1);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+            background: linear-gradient(45deg, #1E90FF, #00BFFF, #007BFF);
+        }
+    </style>
+</head>
+<body>
+    <div class="gochat-container" onclick="navigateToChat()">
+        <img src="logo.png" alt="VaidyAInova Logo" class="gochat-logo">
+        <p class="click-text">Click Here to Chat</p>
+    </div>
+
+    <script>
+        function navigateToChat() {
+            window.location.href = "index.html";
+        }
+    </script>
+</body>
+</html>

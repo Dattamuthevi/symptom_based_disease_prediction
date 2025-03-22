@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VaidyAInova AI Chat</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <script src="{{ url_for('static', filename='script.js') }}" defer></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <!-- Sidebar for Chat History -->
+    <aside class="sidebar">
+        <h2>Chat History</h2>
+        <ul id="chat-history">
+            <li>No recent chats</li>
+        </ul>
+    </aside>
+
+    <!-- Full-Page Chat Box -->
+    <main class="chat-area">
+        <header class="chat-header">
+            <div class="hero-section">
+                <h1 id="typewriter"></h1>
+                <h3>YOUR REC<span class="smiley">😊</span>VERY  OUR GL<span class="smiley">😊</span>RY</h3>
+            </div>
+            <button id="theme-toggle" class="theme-toggle">
+                <i class="fas fa-moon"></i>
+            </button>
+        </header>
+
+        <section class="chat-box" id="chat-box">
+            <div class="message bot">
+                <p>Hello! How can I assist you today?</p>
+            </div>
+        </section>
+        <script>
+            const text = "VAIDYAINOVA";
+            let index = 0;
+            function typeEffect() {
+                if (index < text.length) {
+                    let span = document.createElement("span");
+                    let color;
+                    if (index < 5 || index > 6) { // "VAID" and "NOVA" in blue
+                        color = "blue";
+                    } else { // "AI" in red
+                        color = "red";
+                    }
+                    span.innerHTML = text.charAt(index);
+                    span.style.color = color;
+                    document.getElementById("typewriter").appendChild(span);
+                    index++;
+                    setTimeout(typeEffect, 200);
+                }
+            }
+            document.addEventListener("DOMContentLoaded", typeEffect);
+        </script>
+        <footer class="chat-input">
+            <input type="text" id="user-input" placeholder="Type your message..." autocomplete="off">
+            <button id="send-btn"><i class="fas fa-paper-plane"></i></button>
+        </footer>
+    </main>
+</body>
+</html>

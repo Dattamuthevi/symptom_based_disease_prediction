@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Based Disease Recommendation System</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a7083917a9.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Caudex:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body style="background-color: rgb(226, 222, 222);">
+    <!-- Navbar -->
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="navbar-left">
+            <img src="logo.png" alt="Logo" class="logo">
+        </div>
+        <ul class="navbar-right">
+            <li><a href="home.html"><i class="fas fa-home"></i> Home</a></li>
+            <li><a href="about.html"><i class="fas fa-info-circle"></i> About</a></li>
+            <li><a href="faq.html"><i class="fas fa-question-circle"></i> FAQ</a></li>
+            <li><a href="contact.html"><i class="fas fa-phone"></i> Contact</a></li>
+        </ul>
+    </nav>
+    
+    <div class="hero-section">
+        <h1 id="typewriter"></h1>
+        <h3>YOUR REC<span class="smiley">😊</span>VERY  OUR GL<span class="smiley">😊</span>RY</h3>
+    </div>
+
+<!-- First Full Page: Carousel and About Section -->
+<section class="carousel-about-container">
+    <!-- Carousel with Proper Gaps & Centering -->
+    <div class="carousel-wrapper">
+        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+            </ol>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="images/img1.jpg" class="d-block w-100" alt="Image 1">
+                </div>
+                <div class="carousel-item">
+                    <img src="images/img2.jpg" class="d-block w-100" alt="Image 2">
+                </div>
+                <div class="carousel-item">
+                    <img src="images/img3.jpg" class="d-block w-100" alt="Image 3">
+                </div>
+                <div class="carousel-item">
+                    <img src="images/img4.jpg" class="d-block w-100" alt="Image 4">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- About Section with Proper Spacing -->
+    <div class="about-wrapper">
+        <h2>About the Project</h2>
+        <p class="about-description">VaidyAInova is an AI-powered platform that transforms healthcare by offering personalized disease recommendations based on user-reported symptoms. By utilizing advanced machine learning algorithms, it delivers accurate predictions tailored to individual needs. The user-friendly interface empowers individuals to take charge of their health, enabling early diagnosis and informed decision-making. Additionally, VaidyAInova features an AI chatbot for real-time medical advice, enhancing accessibility to healthcare. Our goal is to bridge the gap between patients and providers, promoting a proactive approach to wellness and a healthier future for all.</p>
+    </div>
+</section>
+
+    <!-- Second Full Page: Info Section (Clickable Options) -->
+    <section class="full-page info-section">
+        <div class="info-box" onclick="location.href='#diseases';">
+            <h3>About Diseases</h3>
+            <img src="images/disease.jpg" class="d-block w-100" alt="Image 4">
+            <p>Get detailed information about various diseases based on your symptoms.</p>
+        </div>
+        <div class="info-box" onclick="location.href='#hospitals';">
+            <h3>Check the Metrics Visualization</h3>
+            <img src="images/metrics.jpg" class="d-block w-100" alt="Image 4">
+            <p>You can find out exploratory data analysis, features, and a lot more about us.</p>
+        </div>
+        <div class="info-box" onclick="location.href='gochat.html';">
+            <h3>Go Chat</h3>
+            <img src="images/cb.jpg" class="d-block w-100" alt="Image 4">
+            <p>Chat with our AI bot to get real-time help and medical advice.</p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <div class="contact-section">
+        <h2>Contact the Developers</h2><br><br>
+        <div class="developer-info">
+            <div class="developer-card">
+                <img src="https://i1.rgstatic.net/ii/profile.image/11431281273809169-1724765989300_Q512/Raghu-Datta-Muthevi.jpg" alt="Datta Muthevi">
+                <h3>Raghu Datta Muthevi</h3>
+                <p>Data Scientist</p>
+                <p>Founder VaidyAInova</p>
+                <div class="contact-links">
+                    <a href="https://www.instagram.com/sr_datta_twenty7/" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://twitter.com/datta_muthevi" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a href="mailto:dattamuthevi@gmail.com"><i class="fas fa-envelope"></i></a>
+                    <a href="tel:7995483847"><i class="fas fa-phone"></i></a>
+                    <a href="https://www.linkedin.com/in/raghu-datta-muthevi/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://github.com/Dattamuthevi" target="_blank"><i class="fab fa-github"></i></a>
+                </div>
+            </div>
+
+            <div class="developer-card">
+                <img src="https://scholar.googleusercontent.com/citations?view_op=view_photo&user=W6GkYEsAAAAJ&citpid=2" alt="Venkata Reddy">
+                <h3>Venkata Reddy</h3>
+                <p>Full Stack Web Developer</p>
+                <p>Co-Founder VaidyAInova</p>
+                <div class="contact-links">
+                    <a href="https://www.instagram.com/venkat_reddi123/" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a href="mailto:venkatareddytiyyagura6@gmail.com"><i class="fas fa-envelope"></i></a>
+                    <a href="tel:7893212958"><i class="fas fa-phone"></i></a>
+                    <a href="https://www.linkedin.com/in/venkata-reddy-tiyyagura/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://github.com/venkatareddy98" target="_blank"><i class="fab fa-github"></i></a>
+                </div>
+            </div>
+
+            <div class="developer-card">
+                <img src="developer3.jpg" alt="Varshitha">
+                <h3>Varshitha</h3>
+                <p>Researcher VaidyAInova</p>
+                <div class="contact-links">
+                    <a href="https://www.instagram.com/sr_datta_twenty7/" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a href="mailto:raghudatta99@gmail.com"><i class="fas fa-envelope"></i></a>
+                    <a href="tel:7995483847"><i class="fas fa-phone"></i></a>
+                    <a href="https://www.linkedin.com/in/raghu-datta-muthevi-7323b6260/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://github.com/Dattamuthevi" target="_blank"><i class="fab fa-github"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const text = "VAIDYAINOVA";
+        let index = 0;
+        function typeEffect() {
+            if (index < text.length) {
+                let span = document.createElement("span");
+                let color;
+                if (index < 5 || index > 6) { // "VAID" and "NOVA" in blue
+                    color = "blue";
+                } else { // "AI" in red
+                    color = "red";
+                }
+                span.innerHTML = text.charAt(index);
+                span.style.color = color;
+                document.getElementById("typewriter").appendChild(span);
+                index++;
+                setTimeout(typeEffect, 200);
+            }
+        }
+        document.addEventListener("DOMContentLoaded", typeEffect);
+    </script>
+    <!-- Bootstrap and jQuery for Carousel -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
